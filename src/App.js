@@ -1,13 +1,14 @@
 import SignIn from "./Screens/SignIn";
 import SignUp from "./Screens/SignUp";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div>
-        {/* <h1 className="text-3xl font-bold underline">Hello World</h1> */}
-        {/* <SignUp /> */}
-        <SignIn />
-      </div>
+      <Routes>
+        <Route exact path="/" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
+      </Routes>
     </>
   );
 }
